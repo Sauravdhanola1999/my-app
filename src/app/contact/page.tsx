@@ -1,18 +1,10 @@
 import ContactForm from "@/src/components/home/ContactForm";
 import type { Metadata } from "next";
-import Link from "next/link";
 import {
   ShieldCheck,
   Clock,
   Sparkles,
-  Phone,
-  Mail,
-  MapPin,
   CheckCircle,
-  Paintbrush,
-  Droplets,
-  Palette,
-  Sofa,
   Calendar,
   Star,
 } from "lucide-react";
