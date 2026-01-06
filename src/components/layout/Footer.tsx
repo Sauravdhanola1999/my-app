@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Phone, Mail, MapPin } from "lucide-react";
+import { Phone, Mail, MapPin, Facebook, Instagram } from "lucide-react";
 
 export default function Footer() {
   return (
@@ -11,9 +11,30 @@ export default function Footer() {
               <span className="text-brand-blue">Colourfull</span>{" "}
               <span className="text-white">Homes</span>
             </h3>
-            <p className="text-base leading-relaxed text-gray-400 mb-4">
+            <p className="text-base leading-relaxed text-gray-400 mb-6">
               Complete home solutions for modern living. Trusted by thousands of homeowners.
             </p>
+            {/* Social Media Icons */}
+            <div className="flex gap-4">
+              <a
+                href="https://facebook.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-10 h-10 rounded-lg bg-gray-800 hover:bg-brand-blue flex items-center justify-center transition-colors group"
+                aria-label="Facebook"
+              >
+                <Facebook className="w-5 h-5 text-gray-400 group-hover:text-white transition-colors" />
+              </a>
+              <a
+                href="https://instagram.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-10 h-10 rounded-lg bg-gray-800 hover:bg-gradient-to-br hover:from-purple-600 hover:to-pink-600 flex items-center justify-center transition-all group"
+                aria-label="Instagram"
+              >
+                <Instagram className="w-5 h-5 text-gray-400 group-hover:text-white transition-colors" />
+              </a>
+            </div>
           </div>
 
           <div>
