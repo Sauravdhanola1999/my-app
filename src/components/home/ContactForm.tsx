@@ -40,7 +40,7 @@ export default function ContactForm() {
 
       alert("Message sent successfully!");
       reset();
-    } catch (error) {
+    } catch {
       alert("Something went wrong. Please try again.");
     }
   };

@@ -5,13 +5,20 @@ import Link from "next/link";
 
 const BLOG_DIR = path.join(process.cwd(), "content/blogs");
 
+type BlogPost = {
+  slug: string;
+  title?: string;
+  description?: string;
+  [key: string]: unknown;
+};
+
 export default function BlogsPage() {
   const files = fs.readdirSync(BLOG_DIR);
 
-  const blogs = files.map((file) => {
+  const blogs: BlogPost[] = files.map((file) => {
     const content = fs.readFileSync(path.join(BLOG_DIR, file), "utf8");
     const { data } = matter(content);
-    return { slug: file.replace(".md", ""), ...data };
+    return { slug: file.replace(".md", ""), ...data } as BlogPost;
   });
 
   return (
@@ -19,7 +26,7 @@ export default function BlogsPage() {
       <h1 className="text-4xl md:text-5xl font-bold mb-12 text-brand-dark">Blogs</h1>
 
       <div className="grid md:grid-cols-2 gap-6">
-        {blogs.map((blog: any) => (
+        {blogs.map((blog) => (
           <Link
             key={blog.slug}
             href={`/blogs/${blog.slug}`}
