@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { useForm } from "react-hook-form";
-import { MessageCircle, Mail, ChevronDown } from "lucide-react";
+import { MessageCircle, Mail, ChevronDown, CheckCircle, X } from "lucide-react";
 
 type FormData = {
   name: string;
@@ -23,6 +23,7 @@ const SERVICE_OPTIONS = [
 
 export default function ContactForm() {
   const [sendViaWhatsApp, setSendViaWhatsApp] = useState(false);
+  const [showThankYou, setShowThankYou] = useState(false);
   const {
     register,
     handleSubmit,
@@ -40,6 +41,7 @@ export default function ContactForm() {
       const whatsappUrl = `https://wa.me/918050013054?text=${encodeURIComponent(message)}`;
       window.open(whatsappUrl, "_blank");
       reset();
+      setShowThankYou(true);
     } else {
       // Send via Email
       try {
@@ -57,8 +59,8 @@ export default function ContactForm() {
           throw new Error(result.error || "Failed to send email");
         }
 
-        alert("Message sent successfully! We'll get back to you soon.");
         reset();
+        setShowThankYou(true);
       } catch (error) {
         console.error("Error:", error);
         alert("Something went wrong. Please try again.");
@@ -67,10 +69,36 @@ export default function ContactForm() {
   };
 
   return (
-    <form
-      onSubmit={handleSubmit(onSubmit)}
-      className="bg-white border border-gray-200 rounded-2xl p-6 md:p-8 space-y-4 md:space-y-5"
-    >
+    <>
+      {/* Thank You Popup */}
+      {showThankYou && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/50 backdrop-blur-sm animate-in fade-in">
+          <div className="bg-white rounded-2xl p-8 max-w-md w-full shadow-2xl animate-in zoom-in-95">
+            <div className="text-center">
+              <div className="mx-auto w-16 h-16 rounded-full bg-green-100 flex items-center justify-center mb-4">
+                <CheckCircle className="w-10 h-10 text-green-500" />
+              </div>
+              <h3 className="text-2xl font-bold text-brand-dark mb-2">
+                Thank you!
+              </h3>
+              <p className="text-gray-600 mb-6">
+                We&apos;ve received your request. Our team will get back to you shortly.
+              </p>
+              <button
+                onClick={() => setShowThankYou(false)}
+                className="bg-brand-orange text-white px-6 py-3 rounded-lg font-semibold hover:opacity-90 transition-all shadow-[var(--shadow-button)] w-full"
+              >
+                Close
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
+
+      <form
+        onSubmit={handleSubmit(onSubmit)}
+        className="bg-white border border-gray-200 rounded-2xl p-6 md:p-8 space-y-4 md:space-y-5"
+      >
       {/* Name */}
       <div>
         <input
@@ -206,7 +234,8 @@ export default function ContactForm() {
           : sendViaWhatsApp 
           ? "Open WhatsApp" 
           : "Get Free Consultation"}
-      </button>
+        </button>
     </form>
+    </>
   );
 }
