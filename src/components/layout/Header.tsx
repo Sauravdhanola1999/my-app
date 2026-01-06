@@ -4,7 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import clsx from "clsx";
 import { Menu, X } from "lucide-react";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
 const navItems = [
   { name: "Home", href: "/" },
@@ -17,13 +17,6 @@ const navItems = [
 export default function Header() {
   const pathname = usePathname();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-
-  // Close mobile menu when route changes
-  useEffect(() => {
-    if (mobileMenuOpen) {
-      setMobileMenuOpen(false);
-    }
-  }, [pathname, mobileMenuOpen]);
 
   return (
     <header className="sticky top-0 z-50 bg-white/95 backdrop-blur-sm border-b border-gray-100 shadow-sm">
