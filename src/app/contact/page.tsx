@@ -17,11 +17,11 @@ export const metadata: Metadata = {
 
 export default function ContactPage() {
   return (
-    <main className="max-w-6xl mx-auto px-6 py-12 md:py-20">
-      <section className="grid md:grid-cols-2 gap-12 items-start">
+    <main className="max-w-6xl mx-auto px-4 md:px-6 py-8 md:py-12 lg:py-20">
+      <section className="grid md:grid-cols-2 gap-8 md:gap-12 items-start">
         
-        {/* LEFT COLUMN */}
-        <div>
+        {/* LEFT COLUMN - Hidden on mobile */}
+        <div className="hidden md:block">
           {/* Heading */}
           <h1 className="text-4xl md:text-5xl font-bold mb-6 text-brand-dark">
             Contact Us
@@ -73,17 +73,27 @@ export default function ContactPage() {
 
         {/* RIGHT COLUMN */}
         <div>
-          {/* Trust Icons */}
-          <div className="flex flex-wrap gap-4 mb-6">
-            <div className="flex items-center gap-2 text-sm text-gray-600 bg-gray-50 px-3 py-2 rounded-lg">
+          {/* Mobile Heading - Only visible on mobile */}
+          <div className="md:hidden mb-6">
+            <h1 className="text-3xl font-bold mb-3 text-brand-dark">
+              Contact Us
+            </h1>
+            <p className="text-base text-gray-600 leading-relaxed">
+              Fill out the form and our team will get back to you shortly.
+            </p>
+          </div>
+
+          {/* Trust Icons - Hidden on mobile */}
+          <div className="hidden md:flex flex-wrap gap-4 mb-6">
+            <div className="flex items-center gap-2 text-sm text-gray-600 bg-brand-light px-3 py-2 rounded-lg">
               <ShieldCheck className="w-4 h-4 text-brand-orange" />
               Trusted Professionals
             </div>
-            <div className="flex items-center gap-2 text-sm text-gray-600 bg-gray-50 px-3 py-2 rounded-lg">
+            <div className="flex items-center gap-2 text-sm text-gray-600 bg-brand-light px-3 py-2 rounded-lg">
               <Clock className="w-4 h-4 text-brand-orange" />
               Quick Response
             </div>
-            <div className="flex items-center gap-2 text-sm text-gray-600 bg-gray-50 px-3 py-2 rounded-lg">
+            <div className="flex items-center gap-2 text-sm text-gray-600 bg-brand-light px-3 py-2 rounded-lg">
               <Sparkles className="w-4 h-4 text-brand-orange" />
               Clean Execution
             </div>
@@ -101,7 +111,7 @@ export default function ContactPage() {
           <div className="mt-6 text-center md:hidden">
             <a
               href="https://wa.me/91XXXXXXXXXX"
-              className="inline-block w-full bg-green-500 text-white py-3 rounded-lg font-semibold hover:bg-green-600 transition-colors shadow-sm"
+              className="inline-block w-full bg-green-500 text-white py-3 rounded-lg font-semibold hover:bg-green-600 transition-colors shadow-[var(--shadow-button)]"
             >
               Chat on WhatsApp
             </a>

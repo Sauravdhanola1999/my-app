@@ -8,7 +8,7 @@ export default function FAQ() {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   return (
-    <section className="py-10 md:py-12 bg-gradient-to-b from-gray-50 to-white">
+    <section className="py-10 md:py-12 bg-brand-light">
       <div className="max-w-5xl mx-auto px-6">
         <div className="text-center mb-8">
           <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-brand-orange/10 mb-4">
@@ -27,19 +27,19 @@ export default function FAQ() {
             return (
               <div
                 key={faq.question}
-                className="bg-white border border-gray-200 rounded-xl overflow-hidden hover:border-brand-orange/30 hover:shadow-md transition-all"
+                className="bg-white border border-gray-200 rounded-xl overflow-hidden hover:border-brand-orange/30 hover:shadow-[var(--shadow-card)] transition-all"
               >
                 <button
                   onClick={() =>
                     setOpenIndex(isOpen ? null : index)
                   }
-                  className="w-full flex justify-between items-center text-left px-6 py-5 hover:bg-gray-50/50 transition-colors group"
+                  className="w-full flex justify-between items-center text-left px-6 py-5 hover:bg-brand-light transition-colors group"
                 >
                   <span className="font-semibold text-brand-dark pr-4 text-base group-hover:text-brand-orange transition-colors">
                     {faq.question}
                   </span>
                   <div className={`flex items-center justify-center w-8 h-8 rounded-lg ${
-                    isOpen ? 'bg-brand-orange/10' : 'bg-gray-100 group-hover:bg-brand-orange/10'
+                    isOpen ? 'bg-brand-orange/10' : 'bg-brand-light group-hover:bg-brand-orange/10'
                   } transition-all shrink-0`}>
                     <ChevronDown
                       className={`w-5 h-5 text-brand-orange transition-transform duration-300 ${
@@ -60,7 +60,7 @@ export default function FAQ() {
         </div>
 
         {/* Mini CTA */}
-        <div className="text-center bg-white rounded-xl p-8 border border-gray-200 shadow-sm">
+          <div className="text-center bg-white rounded-xl p-8 border border-gray-200 shadow-[var(--shadow-card)]">
           <p className="text-gray-700 mb-4 text-lg font-medium">
             Still have questions?
           </p>
@@ -69,7 +69,7 @@ export default function FAQ() {
           </p>
           <a
             href="/contact"
-            className="inline-flex items-center gap-2 bg-brand-orange text-white px-8 py-3 rounded-lg font-semibold hover:opacity-90 transition-all shadow-md hover:shadow-lg"
+            className="inline-flex items-center gap-2 bg-brand-orange text-white px-8 py-3 rounded-lg font-semibold hover:opacity-90 transition-all shadow-[var(--shadow-button)] hover:shadow-xl"
           >
             Talk to Our Expert
           </a>

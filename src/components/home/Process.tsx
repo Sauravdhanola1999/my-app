@@ -50,7 +50,7 @@ export default function Process() {
             return (
               <div
                 key={step.title}
-                className="bg-gray-50 rounded-xl p-5 flex flex-col items-center gap-3 hover:bg-white hover:shadow-md transition-all border border-transparent hover:border-gray-100"
+                className="bg-brand-light rounded-xl p-5 flex flex-col items-center gap-3 hover:bg-white hover:shadow-[var(--shadow-card)] transition-all border border-gray-200 hover:border-brand-orange/30"
               >
                 {/* Icon */}
                 <div className={`w-12 h-12 rounded-xl ${bgColor} flex items-center justify-center`}>

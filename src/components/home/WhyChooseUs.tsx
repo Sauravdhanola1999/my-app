@@ -24,7 +24,7 @@ export default function WhyChooseUs() {
           {points.map(({ label, icon: Icon, description }, index) => (
             <div 
               key={label} 
-              className="bg-gray-50 rounded-xl p-5 text-center hover:bg-white hover:shadow-md transition-all border border-gray-100"
+              className="bg-brand-light rounded-xl p-5 text-center hover:bg-white hover:shadow-[var(--shadow-card)] transition-all border border-gray-200 hover:border-brand-orange/30"
             >
               <div className={`inline-flex items-center justify-center w-14 h-14 rounded-xl mb-3 ${
                 index % 2 === 0 ? 'bg-brand-orange/10' : 'bg-brand-blue/10'

@@ -83,7 +83,7 @@ export default function Header() {
                           <Link
                             key={service.slug}
                             href={`/services/${service.slug}`}
-                            className="flex items-center gap-3 px-4 py-3 text-gray-700 hover:bg-gray-50 hover:text-brand-orange transition-colors"
+                            className="flex items-center gap-3 px-4 py-3 text-gray-700 hover:bg-brand-light hover:text-brand-orange transition-colors"
                             onClick={() => setServicesDropdownOpen(false)}
                           >
                             <Icon className="w-5 h-5 text-brand-orange" />
@@ -154,7 +154,7 @@ export default function Header() {
                         "w-full flex items-center justify-between py-3 px-4 text-base font-medium transition-colors rounded-lg",
                         isActive
                           ? "text-brand-orange bg-brand-orange/10"
-                          : "text-gray-700 hover:text-brand-orange hover:bg-gray-50"
+                          : "text-gray-700 hover:text-brand-orange hover:bg-brand-light"
                       )}
                     >
                       {item.name}
@@ -176,7 +176,7 @@ export default function Header() {
                                 setMobileMenuOpen(false);
                                 setMobileServicesOpen(false);
                               }}
-                              className="flex items-center gap-3 py-2 px-4 text-sm text-gray-600 hover:text-brand-orange hover:bg-gray-50 rounded-lg transition-colors"
+                              className="flex items-center gap-3 py-2 px-4 text-sm text-gray-600 hover:text-brand-orange hover:bg-brand-light rounded-lg transition-colors"
                             >
                               <Icon className="w-4 h-4 text-brand-orange" />
                               <span>{displayName}</span>
@@ -198,7 +198,7 @@ export default function Header() {
                     "block py-3 px-4 text-base font-medium transition-colors rounded-lg",
                     isActive
                       ? "text-brand-orange bg-brand-orange/10"
-                      : "text-gray-700 hover:text-brand-orange hover:bg-gray-50"
+                      : "text-gray-700 hover:text-brand-orange hover:bg-brand-light"
                   )}
                 >
                   {item.name}

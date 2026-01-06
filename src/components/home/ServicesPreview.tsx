@@ -4,7 +4,7 @@ import { ArrowRight } from "lucide-react";
 
 export default function ServicesPreview() {
   return (
-    <section className="py-8 md:py-10 bg-gray-50">
+    <section className="py-8 md:py-10 bg-brand-light">
       <div className="max-w-7xl mx-auto px-6">
         <div className="text-center mb-6 md:mb-8">
           <h2 className="text-3xl md:text-4xl font-bold text-brand-dark mb-3">
@@ -25,7 +25,7 @@ export default function ServicesPreview() {
               <Link
                 key={service.slug}
                 href={`/services/${service.slug}`}
-                className="group bg-white rounded-xl p-6 hover:shadow-lg transition-all border border-gray-100 hover:border-transparent"
+                className="group bg-white rounded-xl p-6 hover:shadow-[var(--shadow-card)] transition-all border border-gray-200 hover:border-brand-orange/30"
               >
                 {/* Icon */}
                 <div className={`w-14 h-14 rounded-xl ${

@@ -9,7 +9,6 @@ type FormData = {
   mobile: string;
   service: string;
   city: string;
-  message: string;
 };
 
 const SERVICE_OPTIONS = [
@@ -48,7 +47,7 @@ export default function ContactForm() {
   return (
     <form
       onSubmit={handleSubmit(onSubmit)}
-      className="bg-white border border-gray-200 rounded-2xl p-8 space-y-5"
+      className="bg-white border border-gray-200 rounded-2xl p-6 md:p-8 space-y-4 md:space-y-5"
     >
       {/* Name */}
       <input
@@ -96,21 +95,13 @@ export default function ContactForm() {
         className="w-full border border-gray-200 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-brand-orange/20 focus:border-brand-orange transition"
       />
 
-      {/* Message */}
-      <textarea
-        {...register("message")}
-        placeholder="Tell us about your project"
-        rows={4}
-        className="w-full border border-gray-200 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-brand-orange/20 focus:border-brand-orange transition resize-none"
-      />
-
       {/* Submit */}
       <button
         type="submit"
         disabled={isSubmitting}
-        className="bg-brand-orange text-white px-6 py-3.5 rounded-lg font-semibold hover:opacity-90 disabled:opacity-60 disabled:cursor-not-allowed w-full transition-all shadow-sm hover:shadow"
+        className="bg-brand-orange text-white px-6 py-3.5 rounded-lg font-semibold hover:opacity-90 disabled:opacity-60 disabled:cursor-not-allowed w-full transition-all shadow-[var(--shadow-button)] hover:shadow-xl"
       >
-        {isSubmitting ? "Sending..." : "Send Message"}
+        {isSubmitting ? "Submitting..." : "Get Free Consultation"}
       </button>
     </form>
   );

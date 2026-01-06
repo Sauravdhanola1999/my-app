@@ -67,7 +67,7 @@ export default function ServiceBlocks() {
             <Link
               key={service.title}
               href={service.href}
-              className="group bg-white rounded-xl overflow-hidden border border-gray-200 hover:border-brand-orange/30 hover:shadow-xl transition-all"
+              className="group bg-white rounded-xl overflow-hidden border border-gray-200 hover:border-brand-orange/30 hover:shadow-[var(--shadow-card)] transition-all"
             >
               {/* Image */}
               <div className="relative w-full h-48 overflow-hidden bg-gray-100">

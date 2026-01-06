@@ -65,13 +65,13 @@ export default function Hero() {
             <div className="flex flex-col sm:flex-row gap-3">
               <Link
                 href="/contact"
-                className="inline-flex items-center justify-center gap-2 bg-brand-orange text-white px-6 py-3 rounded-lg font-semibold hover:bg-orange-600 transition-all shadow-lg hover:shadow-xl"
+                className="inline-flex items-center justify-center gap-2 bg-brand-orange text-white px-6 py-3 rounded-lg font-semibold hover:opacity-90 transition-all shadow-[var(--shadow-button)] hover:shadow-xl"
               >
                 Get Free Consultation
               </Link>
               <Link
                 href="/services"
-                className="inline-flex items-center justify-center gap-2 border-2 border-white/30 text-white px-6 py-3 rounded-lg font-semibold hover:bg-white/10 transition-all"
+                className="inline-flex items-center justify-center gap-2 border-2 border-white/30 text-white px-6 py-3 rounded-lg font-semibold hover:bg-white/10 hover:border-white/50 transition-all"
               >
                 Browse Services
               </Link>
@@ -83,7 +83,7 @@ export default function Hero() {
             initial={{ opacity: 0, x: 30 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
-            className="bg-white/95 backdrop-blur-sm rounded-2xl p-8 md:p-10 shadow-2xl border border-white/20"
+            className="bg-white/95 backdrop-blur-sm rounded-2xl p-8 md:p-10 shadow-[var(--shadow-card)] border border-gray-200"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-brand-dark mb-2">
               Quick Services
@@ -101,7 +101,7 @@ export default function Hero() {
                   <Link
                     key={index}
                     href={service.href}
-                    className="group flex flex-col items-center text-center p-4 rounded-xl hover:bg-gradient-to-br hover:from-brand-orange/5 hover:to-brand-blue/5 transition-all hover:scale-105 border border-transparent hover:border-gray-200"
+                    className="group flex flex-col items-center text-center p-4 rounded-xl hover:bg-brand-light transition-all hover:scale-105 border border-transparent hover:border-brand-blue/20"
                   >
                     <div className={`w-14 h-14 rounded-xl ${
                       isBlue ? 'bg-brand-blue/10' : 'bg-brand-orange/10'

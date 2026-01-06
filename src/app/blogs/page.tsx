@@ -30,7 +30,7 @@ export default function BlogsPage() {
           <Link
             key={blog.slug}
             href={`/blogs/${blog.slug}`}
-            className="bg-white border border-gray-200 rounded-xl p-8 hover:shadow-lg hover:border-gray-300 transition-all"
+            className="bg-white border border-gray-200 rounded-xl p-8 hover:shadow-[var(--shadow-card)] hover:border-brand-orange/30 transition-all"
           >
             <h2 className="text-xl font-semibold mb-3 text-brand-dark">{blog.title}</h2>
             <p className="text-gray-600 leading-relaxed">{blog.description}</p>

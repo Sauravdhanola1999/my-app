@@ -2,7 +2,7 @@ import { Phone, MessageCircle } from "lucide-react";
 
 export default function CTA() {
   return (
-    <section className="py-8 md:py-10 bg-gradient-to-r from-brand-orange to-brand-blue text-white">
+    <section className="py-8 md:py-10 bg-brand-blue text-white">
       <div className="max-w-4xl mx-auto px-6">
         <div className="text-center mb-5">
           <h2 className="text-3xl md:text-4xl font-bold mb-3">
@@ -19,14 +19,14 @@ export default function CTA() {
         <div className="flex flex-col sm:flex-row gap-3 justify-center max-w-2xl mx-auto">
           <a
             href="/contact"
-            className="flex items-center justify-center gap-2 bg-white text-brand-orange px-6 py-3 rounded-lg font-semibold hover:bg-gray-50 transition-all shadow-lg hover:shadow-xl text-sm md:text-base"
+            className="flex items-center justify-center gap-2 bg-brand-orange text-white px-6 py-3 rounded-lg font-semibold hover:opacity-90 transition-all shadow-[var(--shadow-button)] hover:shadow-xl text-sm md:text-base"
           >
             <Phone className="w-4 h-4" />
             Get Free Consultation
           </a>
           <a
             href="https://wa.me/91XXXXXXXXXX"
-            className="flex items-center justify-center gap-2 bg-green-500 text-white px-6 py-3 rounded-lg font-semibold hover:bg-green-600 transition-all shadow-lg hover:shadow-xl text-sm md:text-base"
+            className="flex items-center justify-center gap-2 bg-white text-brand-blue px-6 py-3 rounded-lg font-semibold hover:bg-brand-light transition-all shadow-lg hover:shadow-xl text-sm md:text-base"
           >
             <MessageCircle className="w-4 h-4" />
             Chat on WhatsApp

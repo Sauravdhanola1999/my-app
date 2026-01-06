@@ -19,7 +19,7 @@ export default function BeforeAfterGallery() {
           {projects.map((project) => (
             <div
               key={project.title}
-              className="bg-white rounded-xl overflow-hidden border border-gray-200 hover:shadow-md transition-all hover:border-gray-300"
+              className="bg-white rounded-xl overflow-hidden border border-gray-200 hover:shadow-[var(--shadow-card)] transition-all hover:border-brand-orange/30"
             >
               {/* Images */}
               <div className="grid grid-cols-2">
@@ -66,7 +66,7 @@ export default function BeforeAfterGallery() {
         <div className="text-center mt-10">
           <a
             href="/contact"
-            className="inline-block bg-brand-orange text-white px-6 py-3 rounded-lg font-semibold hover:opacity-90 transition-all shadow-sm hover:shadow text-sm md:text-base"
+            className="inline-block bg-brand-orange text-white px-6 py-3 rounded-lg font-semibold hover:opacity-90 transition-all shadow-[var(--shadow-button)] hover:shadow-xl text-sm md:text-base"
           >
             Get Similar Transformation
           </a>

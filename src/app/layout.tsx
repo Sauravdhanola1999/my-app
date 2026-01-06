@@ -1,12 +1,19 @@
-import { Source_Sans_3 } from "next/font/google";
+import { Inter, Poppins } from "next/font/google";
 import Footer from "../components/layout/Footer";
 import Header from "../components/layout/Header";
 import "./globals.css";
 
-const sourceSans3 = Source_Sans_3({
-  weight: ["400", "600", "700"],
+const inter = Inter({
+  weight: ["400", "500", "600", "700"],
   subsets: ["latin"],
-  variable: "--font-source-sans-3",
+  variable: "--font-inter",
+  display: "swap",
+});
+
+const poppins = Poppins({
+  weight: ["400", "500", "600", "700", "800"],
+  subsets: ["latin"],
+  variable: "--font-poppins",
   display: "swap",
 });
 
@@ -22,8 +29,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={sourceSans3.variable}>
-      <body className="antialiased font-sans">
+    <html lang="en" className={`${inter.variable} ${poppins.variable}`}>
+      <body className="antialiased font-body">
         <Header />
         {children}
         <Footer />

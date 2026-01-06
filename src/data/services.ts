@@ -24,29 +24,26 @@ export const services: Service[] = [
     title: "Home Painting",
     shortDescription: "Interior & exterior painting with premium finishes.",
     icon: Paintbrush,
-    description: "Transform your home with professional interior and exterior painting services. We use premium quality paints and skilled professionals to give your home a fresh, beautiful look that lasts for years.",
+    description: "At Colourfull Homes, we believe your home deserves more than just paint — it deserves personality, protection, and perfection. Our professional home painting services are designed to transform your interiors and exteriors with flawless finishes, vibrant colors, and long-lasting results.",
     features: [
-      "Interior wall painting with premium finishes",
-      "Exterior wall painting with weather-resistant paints",
-      "Ceiling painting and texture work",
-      "Color consultation and selection",
-      "Furniture and floor protection during work",
-      "Post-service cleaning included"
+      "Interior Home Painting - Refresh your living spaces with smooth finishes and modern color combinations that enhance comfort and style",
+      "Exterior Home Painting - Protect your home from weather damage while improving curb appeal with durable, weather-resistant paints",
+      "Wall Preparation & Finishing - We ensure proper surface cleaning, crack filling, sanding, and priming for a perfect and long-lasting finish",
+      "Color Consultation - Not sure which shade suits your home? Our experts help you choose the right colors to match your taste and lighting"
     ],
     process: [
-      "Free site visit and consultation",
-      "Color selection and material recommendation",
-      "Surface preparation and priming",
-      "Professional painting application",
-      "Quality inspection and touch-ups",
-      "Final cleaning and handover"
+      "Site inspection & consultation",
+      "Surface preparation",
+      "Primer application",
+      "Final paint coats",
+      "Cleanup & quality check"
     ],
     benefits: [
-      "Enhanced aesthetic appeal of your home",
-      "Increased property value",
-      "Protection against weather and wear",
-      "Long-lasting finish with premium paints",
-      "Professional execution with zero mess"
+      "Skilled & experienced painters",
+      "Premium quality paints & materials",
+      "Clean, safe, and dust-free process",
+      "On-time project completion",
+      "Transparent pricing with no hidden costs"
     ],
   },
   {
@@ -54,29 +51,27 @@ export const services: Service[] = [
     title: "Waterproofing",
     shortDescription: "Protect your home from leaks and dampness.",
     icon: Droplets,
-    description: "Comprehensive waterproofing solutions to protect your home from water damage, leaks, and dampness. Our expert team uses advanced techniques and premium materials to ensure your home stays dry and protected.",
+    description: "Waterproofing is one of the most critical yet often overlooked aspects of home protection. At Colourfull Homes, we provide professional waterproofing solutions designed to safeguard your property from water seepage, dampness, leakage, and long-term structural damage. With changing weather conditions and heavy monsoons, especially in India, proper waterproofing is not a luxury—it's a necessity.",
     features: [
-      "Terrace and roof waterproofing",
-      "Bathroom waterproofing solutions",
-      "Basement and foundation protection",
-      "Wall waterproofing for dampness",
-      "Crack sealing and repair",
-      "Long-term warranty on work"
+      "Terrace & Roof Waterproofing – Prevents rainwater leakage and protects slabs from cracks and weather damage",
+      "Bathroom & Kitchen Waterproofing – Stops water seepage that causes damp patches and damage to adjacent walls",
+      "External Wall Waterproofing – Shields exterior surfaces from rain, humidity, and pollution",
+      "Basement & Foundation Waterproofing – Protects the core structure from groundwater seepage",
+      "Crack Filling & Leakage Repair – Targets problem areas with precision treatment"
     ],
     process: [
-      "Detailed inspection of problem areas",
-      "Root cause analysis and solution design",
+      "Detailed site inspection to identify root cause",
+      "Assessment and recommendation of effective solution",
       "Surface preparation and cleaning",
-      "Application of waterproofing membranes",
-      "Quality testing and verification",
-      "Post-installation support"
+      "Application of waterproofing materials",
+      "Curing process and quality verification"
     ],
     benefits: [
-      "Complete protection from water damage",
-      "Prevents structural damage and cracks",
-      "Eliminates dampness and mold growth",
-      "Increases home durability and lifespan",
-      "Peace of mind with professional guarantee"
+      "Trained and experienced waterproofing professionals",
+      "Customized solutions for each problem area",
+      "High-quality materials and modern techniques",
+      "Clean, safe, and timely execution",
+      "Long-term protection and peace of mind"
     ],
   },
   {
@@ -84,29 +79,27 @@ export const services: Service[] = [
     title: "Wall Textures",
     shortDescription: "Stylish textures to elevate your interiors.",
     icon: Brush,
-    description: "Add depth and character to your walls with modern texture solutions. From smooth Venetian plaster to dramatic 3D textures, we offer a wide range of options to match your style and budget.",
+    description: "Walls play a major role in defining the personality of a home. Plain painted walls can look elegant, but textured walls add depth, character, and a designer touch that instantly elevates your interiors. At Colourfull Homes, our Wall Texture Services are crafted to transform ordinary walls into stunning visual features that reflect your style and enhance your living spaces.",
     features: [
-      "Venetian plaster finishes",
-      "Textured paint applications",
-      "3D wall panel installations",
-      "Brick and stone textures",
-      "Custom texture designs",
-      "Color matching and blending"
+      "Modern and contemporary textures for stylish interiors",
+      "Classic and subtle textures for elegant, timeless looks",
+      "Concrete and rustic textures for industrial-style homes",
+      "Designer accent wall textures for feature walls"
     ],
     process: [
       "Design consultation and texture selection",
-      "Surface preparation and priming",
-      "Texture application by skilled craftsmen",
-      "Finishing and sealing",
+      "Surface preparation and leveling",
+      "Texture application by skilled professionals",
+      "Final finishing and sealing",
       "Quality inspection",
       "Final touch-ups and handover"
     ],
     benefits: [
-      "Adds visual interest and depth to walls",
-      "Hides imperfections and cracks",
-      "Modern and stylish appearance",
-      "Easy to maintain and clean",
-      "Increases home value"
+      "Hide minor wall imperfections and uneven surfaces",
+      "Enhance wall durability and resistance to wear",
+      "Add depth and luxury to interiors",
+      "Easy to maintain compared to frequent repainting",
+      "Textured walls work beautifully with lighting"
     ],
   },
   {
@@ -114,29 +107,31 @@ export const services: Service[] = [
     title: "Wallpapers & Panels",
     shortDescription: "Elegant wall coverings for modern homes.",
     icon: Wallpaper,
-    description: "Transform your walls with premium wallpapers and decorative panels. Choose from thousands of designs, patterns, and materials to create stunning feature walls and complete room makeovers.",
+    description: "Walls are more than just boundaries—they are a canvas that defines the mood and style of your home. If you want to add elegance, warmth, or a bold design statement to your interiors, Wallpaper & Wall Panel Services by Colourfull Homes offer the perfect solution. With a wide range of designs, textures, and finishes, we help you transform ordinary walls into stunning focal points.",
     features: [
-      "Premium wallpaper installation",
-      "Decorative wall panels",
-      "3D wall panels",
-      "Custom design options",
-      "Pattern matching and alignment",
-      "Seamless installation"
+      "Designer wallpapers for living rooms and bedrooms",
+      "Minimal and textured wallpapers for modern interiors",
+      "Floral, geometric, and artistic patterns for feature walls",
+      "Washable and durable wallpapers suitable for long-term use",
+      "PVC and MDF wall panels for durability and style",
+      "3D wall panels for dramatic and modern effects",
+      "Wooden and laminate panels for warmth and elegance",
+      "Decorative panels for TV units, bedrooms, and accent walls"
     ],
     process: [
       "Design consultation and selection",
       "Wall measurement and preparation",
       "Pattern matching and cutting",
-      "Professional installation",
+      "Professional installation with proper alignment",
       "Seam finishing and trimming",
       "Final inspection and cleanup"
     ],
     benefits: [
-      "Quick transformation of any space",
-      "Wide variety of designs and patterns",
-      "Easy to replace and update",
-      "Durable and long-lasting",
-      "Adds personality to your home"
+      "Enhance the visual appeal of interiors instantly",
+      "Hide minor wall imperfections and uneven surfaces",
+      "Durable, long-lasting, and easy to maintain",
+      "Create unique feature walls without heavy renovation",
+      "Offer a premium finish compared to regular paint"
     ],
   },
   {
@@ -144,29 +139,27 @@ export const services: Service[] = [
     title: "Wood Polish",
     shortDescription: "Restore and protect wooden surfaces.",
     icon: Sofa,
-    description: "Professional wood polishing and finishing services to restore the natural beauty of your wooden furniture, doors, and surfaces. We use premium polishes and techniques to give your wood a like-new appearance.",
+    description: "Wooden furniture and interiors bring warmth, elegance, and timeless charm to any home. Over time, however, wood can lose its natural shine due to dust, moisture, scratches, and daily wear. At Colourfull Homes, our professional Wood Polish Services are designed to restore, protect, and enhance the beauty of your wooden surfaces—making them look as good as new.",
     features: [
-      "Furniture polishing and restoration",
-      "Wooden door and window finishing",
-      "Floor polishing and refinishing",
-      "Antique furniture restoration",
-      "Protective coating application",
-      "Scratch and damage repair"
+      "Natural wood finish polishing to retain the original grain and texture",
+      "Gloss and semi-gloss polishing for a rich, luxurious look",
+      "Matte finish polishing for modern and minimal interiors",
+      "Restoration polishing for old, dull, or scratched furniture"
     ],
     process: [
       "Assessment of wood condition",
       "Surface preparation and sanding",
-      "Stain selection and application",
+      "Polish type recommendation and selection",
       "Polish and finish application",
       "Buffing and polishing",
-      "Protective coating and handover"
+      "Final inspection and handover"
     ],
     benefits: [
-      "Restores natural wood beauty",
-      "Protects from wear and damage",
-      "Increases furniture lifespan",
-      "Enhances home aesthetics",
-      "Adds value to wooden items"
+      "Experienced professionals with attention to detail",
+      "Top-quality materials for long-lasting results",
+      "On-time completion with minimal disruption",
+      "Furniture safety with proper covering and handling",
+      "Post-service cleanup for a neat finish"
     ],
   },
   {
@@ -174,29 +167,28 @@ export const services: Service[] = [
     title: "Furniture Design",
     shortDescription: "Custom furniture made for your space.",
     icon: Hammer,
-    description: "Custom furniture design and manufacturing services to create pieces that perfectly fit your space and style. From concept to completion, we design and build furniture that meets your exact requirements.",
+    description: "Furniture is more than just functional—it defines comfort, style, and the way you experience your living space. At Colourfull Homes, our Furniture Designing & Manufacturing Services are tailored to create custom-made furniture that perfectly matches your lifestyle, interior design, and space requirements. From concept to completion, we deliver furniture that blends aesthetics, durability, and craftsmanship.",
     features: [
-      "Custom furniture design",
-      "Modular furniture solutions",
-      "Kitchen cabinets and storage",
-      "Wardrobes and closets",
-      "Living room furniture",
-      "Complete interior furniture packages"
+      "Living room furniture (sofas, TV units, coffee tables)",
+      "Bedroom furniture (beds, wardrobes, side tables)",
+      "Dining tables and storage units",
+      "Modular and custom cabinets",
+      "Office and commercial furniture"
     ],
     process: [
-      "Space measurement and consultation",
-      "Design and 3D visualization",
+      "Design consultation and space measurement",
+      "Custom design creation and 3D visualization",
       "Material selection and approval",
-      "Manufacturing and quality control",
-      "Installation and assembly",
-      "Final inspection and adjustments"
+      "Precision manufacturing with quality materials",
+      "Professional installation and assembly",
+      "Final inspection and quality check"
     ],
     benefits: [
-      "Perfect fit for your space",
-      "Customized to your style",
-      "High-quality materials and craftsmanship",
-      "Maximizes space utilization",
-      "Unique pieces designed for you"
+      "Customized designs tailored to your needs",
+      "Skilled designers and craftsmen",
+      "Premium-quality materials and finishes",
+      "Transparent pricing with no hidden costs",
+      "On-time delivery and professional installation"
     ],
   },
 ];
