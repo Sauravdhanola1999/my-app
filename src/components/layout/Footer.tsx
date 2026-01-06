@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { Phone, Mail, MapPin, Facebook, Instagram } from "lucide-react";
 
 export default function Footer() {
@@ -7,12 +8,18 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-6 py-16">
         <div className="grid md:grid-cols-4 gap-12 mb-12">
           <div>
-            <h3 className="text-2xl md:text-3xl font-bold mb-4">
-              <span className="text-brand-blue">Colourfull</span>{" "}
-              <span className="text-white">Homes</span>
-            </h3>
+            <Link href="/" className="flex items-center mb-4">
+              <Image
+                src="/logo.png"
+                alt="Colourfull Homes Logo"
+                width={48}
+                height={48}
+                priority
+                className="object-contain w-16 h-16 md:w-20 md:h-20"
+              />
+            </Link>
             <p className="text-base leading-relaxed text-gray-400 mb-6">
-              Complete home solutions for modern living. Trusted by thousands of homeowners.
+              Colourfull Homes offers trusted and affordable painting solutions for homeowners, property managers, and businesses.
             </p>
             {/* Social Media Icons */}
             <div className="flex gap-4">

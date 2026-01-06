@@ -1,5 +1,6 @@
 import ContactForm from "@/src/components/home/ContactForm";
 import type { Metadata } from "next";
+import Link from "next/link";
 import {
   ShieldCheck,
   Clock,
@@ -8,6 +9,12 @@ import {
   Mail,
   MapPin,
   CheckCircle,
+  Paintbrush,
+  Droplets,
+  Palette,
+  Sofa,
+  Calendar,
+  Star,
 } from "lucide-react";
 
 export const metadata: Metadata = {
@@ -18,7 +25,7 @@ export const metadata: Metadata = {
 
 export default function ContactPage() {
   return (
-    <main className="max-w-6xl mx-auto px-4 md:px-6 py-8 md:py-12 lg:py-20">
+    <main className="max-w-6xl mx-auto px-4 md:px-6 py-8 md:py-12 lg:py-12">
       <section className="grid md:grid-cols-2 gap-8 md:gap-12 items-start">
         
         {/* LEFT COLUMN - Hidden on mobile */}
@@ -38,7 +45,54 @@ export default function ContactPage() {
             Hassle-free home painting with expert supervision, premium materials, and on-time execution.
           </p>
 
-          {/* Reach Us */}
+          {/* Quick Services */}
+          {/* <div className="mb-10">
+            <h2 className="text-xl font-semibold mb-4 text-brand-dark">Our Services</h2>
+            <div className="space-y-3">
+              <Link href="/services/home-painting" className="flex items-center gap-3 p-3 bg-brand-light rounded-lg hover:bg-brand-orange/10 hover:border-brand-orange/30 border border-transparent transition-all group">
+                <Paintbrush className="w-5 h-5 text-brand-orange group-hover:scale-110 transition-transform" />
+                <span className="text-gray-700 font-medium group-hover:text-brand-orange transition-colors">Home Painting</span>
+              </Link>
+              <Link href="/services/waterproofing" className="flex items-center gap-3 p-3 bg-brand-light rounded-lg hover:bg-brand-orange/10 hover:border-brand-orange/30 border border-transparent transition-all group">
+                <Droplets className="w-5 h-5 text-brand-blue group-hover:scale-110 transition-transform" />
+                <span className="text-gray-700 font-medium group-hover:text-brand-orange transition-colors">Waterproofing</span>
+              </Link>
+              <Link href="/services/wall-textures" className="flex items-center gap-3 p-3 bg-brand-light rounded-lg hover:bg-brand-orange/10 hover:border-brand-orange/30 border border-transparent transition-all group">
+                <Palette className="w-5 h-5 text-brand-orange group-hover:scale-110 transition-transform" />
+                <span className="text-gray-700 font-medium group-hover:text-brand-orange transition-colors">Wall Textures</span>
+              </Link>
+              <Link href="/services/furniture-design" className="flex items-center gap-3 p-3 bg-brand-light rounded-lg hover:bg-brand-orange/10 hover:border-brand-orange/30 border border-transparent transition-all group">
+                <Sofa className="w-5 h-5 text-brand-blue group-hover:scale-110 transition-transform" />
+                <span className="text-gray-700 font-medium group-hover:text-brand-orange transition-colors">Furniture Design</span>
+              </Link>
+              <Link href="/services" className="flex items-center gap-3 p-3 bg-brand-orange/10 rounded-lg hover:bg-brand-orange/20 border border-brand-orange/30 transition-all group">
+                <span className="text-brand-orange font-semibold group-hover:text-brand-blue transition-colors">View All Services →</span>
+              </Link>
+            </div>
+          </div> */}
+
+          {/* Business Hours */}
+          <div className="mb-10">
+            <h2 className="text-xl font-semibold mb-4 text-brand-dark">Business Hours</h2>
+            <div className="bg-brand-light rounded-lg p-4 space-y-2">
+              <div className="flex items-center gap-3">
+                <Calendar className="w-5 h-5 text-brand-orange" />
+                <div>
+                  <div className="font-medium text-gray-700">Monday - Saturday</div>
+                  <div className="text-sm text-gray-600">9:00 AM - 7:00 PM</div>
+                </div>
+              </div>
+              <div className="flex items-center gap-3">
+                <Calendar className="w-5 h-5 text-brand-blue" />
+                <div>
+                  <div className="font-medium text-gray-700">Sunday</div>
+                  <div className="text-sm text-gray-600">10:00 AM - 5:00 PM</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Reach Us
           <div>
             <h2 className="text-xl font-semibold mb-6 text-brand-dark">Reach Us</h2>
 
@@ -77,6 +131,17 @@ export default function ContactPage() {
                 </div>
               </div>
             </div>
+          </div> */}
+
+          {/* Trust Badge */}
+          <div className="mt-10 bg-gradient-to-br from-brand-orange/10 to-brand-blue/10 rounded-xl p-6 border border-brand-orange/20">
+            <div className="flex items-center gap-3 mb-3">
+              <Star className="w-6 h-6 text-brand-orange fill-brand-orange" />
+              <h3 className="text-lg font-semibold text-brand-dark">Trusted by 1000+ Customers</h3>
+            </div>
+            <p className="text-sm text-gray-600 leading-relaxed">
+              Join thousands of satisfied homeowners who trust Colourfull Homes for their painting and home improvement needs.
+            </p>
           </div>
         </div>
 
@@ -120,16 +185,6 @@ export default function ContactPage() {
           </p>
 
           {/* WhatsApp CTA – mobile only */}
-          <div className="mt-6 text-center md:hidden">
-            <a
-              href="https://wa.me/918050013054"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-block w-full bg-green-500 text-white py-3 rounded-lg font-semibold hover:bg-green-600 transition-colors shadow-[var(--shadow-button)]"
-            >
-              Chat on WhatsApp
-            </a>
-          </div>
         </div>
 
       </section>

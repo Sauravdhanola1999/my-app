@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { useForm } from "react-hook-form";
-import { MessageCircle, Mail } from "lucide-react";
+import { MessageCircle, Mail, ChevronDown } from "lucide-react";
 
 type FormData = {
   name: string;
@@ -128,10 +128,10 @@ export default function ContactForm() {
       </div>
 
       {/* Service Dropdown */}
-      <div>
+      <div className="relative">
         <select
           {...register("service", { required: "Please select a service" })}
-          className={`w-full border rounded-lg px-4 py-3 bg-white focus:outline-none focus:ring-2 focus:ring-brand-orange/20 transition ${
+          className={`w-full border rounded-lg px-4 py-3 bg-white focus:outline-none focus:ring-2 focus:ring-brand-orange/20 transition appearance-none cursor-pointer pr-10 ${
             errors.service ? "border-red-500 focus:border-red-500" : "border-gray-200 focus:border-brand-orange"
           }`}
           defaultValue=""
@@ -145,6 +145,9 @@ export default function ContactForm() {
             </option>
           ))}
         </select>
+        <ChevronDown className={`absolute right-3 top-1/2 -translate-y-1/2 w-5 h-5 pointer-events-none ${
+          errors.service ? "text-red-500" : "text-gray-400"
+        }`} />
         {errors.service && (
           <p className="text-red-500 text-sm mt-1">{errors.service.message}</p>
         )}

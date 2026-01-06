@@ -30,3 +30,25 @@ body {
 h1, h2, h3, h4 {
   font-family: var(--font-poppins), system-ui, sans-serif;
 }
+
+/* Custom Select Dropdown Styling */
+select {
+  background-image: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+select::-ms-expand {
+  display: none;
+}
+
+select option {
+  padding: 8px;
+  background-color: white;
+  color: var(--color-brand-dark);
+}
+
+select option:disabled {
+  color: #9ca3af;
+}
