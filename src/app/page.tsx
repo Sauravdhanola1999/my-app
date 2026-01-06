@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Hero from "../components/home/Hero";
+import Stats from "../components/home/Stats";
 import ServicesPreview from "../components/home/ServicesPreview";
 import WhyChooseUs from "../components/home/WhyChooseUs";
 import Process from "../components/home/Process";
@@ -20,6 +21,7 @@ export default function HomePage() {
   return (
     <main>
       <Hero />
+      <Stats />
       <ServicesPreview />
       <ServiceBlocks />
       <WhyChooseUs />

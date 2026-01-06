@@ -31,29 +31,34 @@ const steps = [
 
 export default function Process() {
   return (
-    <section className="py-20 bg-white">
+    <section className="py-8 md:py-10 bg-white">
       <div className="max-w-7xl mx-auto px-6">
-        <h2 className="text-3xl font-bold text-center mb-12">
-          Our Simple Process
-        </h2>
+        <div className="text-center mb-6 md:mb-8">
+          <h2 className="text-3xl md:text-4xl font-bold text-brand-dark mb-3">
+            Our Simple Process
+          </h2>
+          <p className="text-base text-gray-600">From consultation to completion</p>
+        </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-5 gap-6 text-center">
+        <div className="grid grid-cols-2 md:grid-cols-5 gap-3">
           {steps.map((step, index) => {
             const Icon = step.icon;
+            const isBlue = index % 2 === 1;
+            const bgColor = isBlue ? 'bg-brand-blue/10' : 'bg-brand-orange/10';
+            const iconColor = isBlue ? 'text-brand-blue' : 'text-brand-orange';
 
             return (
               <div
                 key={step.title}
-                className="border rounded-xl p-6 flex flex-col items-center gap-4 hover:shadow-md transition"
+                className="bg-gray-50 rounded-xl p-5 flex flex-col items-center gap-3 hover:bg-white hover:shadow-md transition-all border border-transparent hover:border-gray-100"
               >
-
                 {/* Icon */}
-                <div className="w-12 h-12 rounded-full bg-brand-orange/10 flex items-center justify-center">
-                  <Icon className="w-6 h-6 text-brand-orange" />
+                <div className={`w-12 h-12 rounded-xl ${bgColor} flex items-center justify-center`}>
+                  <Icon className={`w-6 h-6 ${iconColor}`} />
                 </div>
 
                 {/* Title */}
-                <p className="font-medium text-brand-dark">
+                <p className="font-medium text-brand-dark text-sm text-center leading-snug">
                   {step.title}
                 </p>
               </div>

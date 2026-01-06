@@ -4,70 +4,112 @@ import { ArrowUpRight } from "lucide-react";
 
 const services = [
   {
-    title: "Interior wall paint",
-    image: "/images/interior-paint.jpg",
+    title: "Interior Painting",
+    description: "Transform your living spaces",
+    image: "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=400&h=300&fit=crop",
     href: "/services/home-painting",
+    color: "bg-brand-orange/10",
   },
   {
-    title: "Exterior wall paint",
-    image: "/images/exterior-paint.jpg",
+    title: "Exterior Painting",
+    description: "Protect & beautify your home",
+    image: "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=400&h=300&fit=crop",
     href: "/services/home-painting",
+    color: "bg-brand-blue/10",
   },
   {
-    title: "Waterproofing Services",
-    image: "/images/waterproofing.jpg",
+    title: "Waterproofing",
+    description: "Stop leaks & dampness",
+    image: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=400&h=300&fit=crop",
     href: "/services/waterproofing",
+    color: "bg-brand-orange/10",
   },
   {
-    title: "Wood Solutions",
-    image: "/images/wood-solutions.jpg",
+    title: "Wall Textures",
+    description: "Add style to your walls",
+    image: "https://images.unsplash.com/photo-1618221195710-dd6b41faaea8?w=400&h=300&fit=crop",
+    href: "/services/wall-textures",
+    color: "bg-brand-blue/10",
+  },
+  {
+    title: "Wood Polish",
+    description: "Restore & protect wood",
+    image: "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=400&h=300&fit=crop",
     href: "/services/wood-polish",
+    color: "bg-brand-orange/10",
+  },
+  {
+    title: "Furniture Design",
+    description: "Custom furniture solutions",
+    image: "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=400&h=300&fit=crop",
+    href: "/services/furniture-design",
+    color: "bg-brand-blue/10",
   },
 ];
 
 export default function ServiceBlocks() {
   return (
-    <section className="py-20 bg-white">
-      <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-12 items-center">
-        {/* LEFT CONTENT */}
-        <div>
-          <h2 className="text-4xl md:text-5xl font-bold text-brand-dark mb-6">
-            Everything a <br /> home needs
+    <section className="py-8 md:py-10 bg-white">
+      <div className="max-w-7xl mx-auto px-6">
+        {/* Header */}
+        <div className="text-center mb-10 md:mb-12">
+          <h2 className="text-3xl md:text-4xl font-bold text-brand-dark mb-3">
+            Everything Your Home Needs
           </h2>
-          <p className="text-lg text-brand-muted max-w-md">
-            One stop solution for all you need to keep your living space intact.
+          <p className="text-base md:text-lg text-gray-600 max-w-2xl mx-auto">
+            Complete home solutions in one place. From painting to waterproofing, we've got you covered.
           </p>
         </div>
 
-        {/* RIGHT BLOCKS */}
-        <div className="grid sm:grid-cols-2 gap-6">
-          {services.map((service) => (
+        {/* Services Grid */}
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-6">
+          {services.map((service, index) => (
             <Link
               key={service.title}
               href={service.href}
-              className="group bg-[#FBF7F2] rounded-2xl p-5 flex items-center gap-4 hover:shadow-md transition"
+              className="group bg-white rounded-xl overflow-hidden border border-gray-200 hover:border-brand-orange/30 hover:shadow-xl transition-all"
             >
               {/* Image */}
-              <div className="relative w-16 h-16 rounded-xl overflow-hidden shrink-0">
+              <div className="relative w-full h-48 overflow-hidden bg-gray-100">
                 <Image
                   src={service.image}
                   alt={service.title}
                   fill
-                  className="object-cover"
+                  className="object-cover group-hover:scale-110 transition-transform duration-500"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
               </div>
 
-              {/* Text */}
-              <div className="flex-1">
-                <h3 className="text-lg font-semibold text-brand-dark">
-                  {service.title}
-                </h3>
+              {/* Content */}
+              <div className="p-5">
+                <div className="flex items-start justify-between gap-3 mb-2">
+                  <div className="flex-1">
+                    <h3 className="text-lg font-semibold text-brand-dark mb-1 group-hover:text-brand-orange transition-colors">
+                      {service.title}
+                    </h3>
+                    <p className="text-sm text-gray-600">
+                      {service.description}
+                    </p>
+                  </div>
+                  <div className={`${service.color} rounded-lg p-2 shrink-0 group-hover:scale-110 transition-transform`}>
+                    <ArrowUpRight className="w-5 h-5 text-brand-orange" />
+                  </div>
+                </div>
               </div>
-
-              {/* Arrow */}
-              <ArrowUpRight className="text-brand-dark group-hover:text-brand-orange transition" />
             </Link>
           ))}
+        </div>
+
+        {/* CTA */}
+        <div className="text-center mt-10">
+          <Link
+            href="/services"
+            className="inline-flex items-center gap-2 text-brand-orange font-semibold hover:gap-3 transition-all text-base"
+          >
+            Explore All Services
+            <ArrowUpRight className="w-5 h-5" />
+          </Link>
         </div>
       </div>
     </section>

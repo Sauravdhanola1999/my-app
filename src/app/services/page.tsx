@@ -38,14 +38,14 @@ const trustPoints = [
 
 export default function ServicesPage() {
   return (
-    <main className="py-20 max-w-7xl mx-auto px-6">
+    <main className="py-12 md:py-20 max-w-7xl mx-auto px-6">
       
       {/* Intro */}
       <section className="mb-16 max-w-3xl">
-        <h1 className="text-4xl md:text-5xl font-bold mb-4">
+        <h1 className="text-4xl md:text-5xl font-bold mb-6 text-brand-dark">
           Our Home Services
         </h1>
-        <p className="text-lg text-gray-600">
+        <p className="text-lg text-gray-600 leading-relaxed">
           From painting and waterproofing to furniture and wall solutions, we
           provide complete home services delivered by trained professionals
           using premium materials.
@@ -53,7 +53,7 @@ export default function ServicesPage() {
       </section>
 
       {/* Services Grid */}
-      <section className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+      <section className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-20">
         {services.map((service) => {
           const Icon = service.icon;
 
@@ -61,15 +61,15 @@ export default function ServicesPage() {
             <Link
               key={service.slug}
               href={`/services/${service.slug}`}
-              className="group border rounded-2xl p-6 hover:shadow-lg transition block"
+              className="group bg-white border border-gray-200 rounded-2xl p-8 hover:shadow-lg hover:border-brand-orange/20 transition-all"
             >
               {/* Icon */}
-              <div className="w-12 h-12 rounded-full bg-brand-orange/10 flex items-center justify-center mb-4">
-                <Icon className="w-6 h-6 text-brand-orange group-hover:scale-110 transition" />
+              <div className="w-14 h-14 rounded-xl bg-brand-orange/10 flex items-center justify-center mb-5 group-hover:bg-brand-orange/20 transition-colors">
+                <Icon className="w-7 h-7 text-brand-orange group-hover:scale-110 transition-transform" />
               </div>
 
               {/* Title */}
-              <h2 className="text-xl font-semibold mb-2 text-brand-dark">
+              <h2 className="text-xl font-semibold mb-3 text-brand-dark">
                 {service.title}
               </h2>
 
@@ -83,18 +83,18 @@ export default function ServicesPage() {
       </section>
 
       {/* Trust Section */}
-      <section className="mt-20 bg-gray-50 rounded-2xl p-10">
-        <h3 className="text-2xl font-semibold mb-8 text-brand-dark">
+      <section className="bg-gray-50 rounded-2xl p-10 md:p-12">
+        <h3 className="text-2xl md:text-3xl font-semibold mb-10 text-brand-dark">
           Why Choose Our Services?
         </h3>
 
-        <ul className="grid sm:grid-cols-2 md:grid-cols-3 gap-6">
+        <ul className="grid sm:grid-cols-2 md:grid-cols-3 gap-4">
           {trustPoints.map(({ label, icon: Icon }) => (
             <li
               key={label}
-              className="flex items-center gap-4 bg-white rounded-xl p-4 shadow-sm hover:shadow-md transition"
+              className="flex items-center gap-4 bg-white rounded-xl p-5 hover:shadow-md transition-all border border-gray-100"
             >
-              <div className="w-10 h-10 rounded-full bg-brand-orange/10 flex items-center justify-center shrink-0">
+              <div className="w-11 h-11 rounded-xl bg-brand-orange/10 flex items-center justify-center shrink-0">
                 <Icon className="w-5 h-5 text-brand-orange" />
               </div>
               <span className="text-sm font-medium text-gray-700">
