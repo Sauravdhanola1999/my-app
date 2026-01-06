@@ -7,6 +7,7 @@ import {
   Phone,
   Mail,
   MapPin,
+  CheckCircle,
 } from "lucide-react";
 
 export const metadata: Metadata = {
@@ -23,14 +24,18 @@ export default function ContactPage() {
         {/* LEFT COLUMN - Hidden on mobile */}
         <div className="hidden md:block">
           {/* Heading */}
-          <h1 className="text-4xl md:text-5xl font-bold mb-6 text-brand-dark">
-            Contact Us
+          <h1 className="text-4xl md:text-5xl font-bold mb-4 text-brand-dark">
+            Colourfull Homes
           </h1>
+
+          {/* Subheading */}
+          <h2 className="text-2xl md:text-3xl font-semibold mb-4 text-brand-dark">
+            Home Painting Services
+          </h2>
 
           {/* Helper text */}
           <p className="text-lg text-gray-600 max-w-md mb-10 leading-relaxed">
-            Have a project in mind? Fill out the form and our team will get back
-            to you shortly.
+            Hassle-free home painting with expert supervision, premium materials, and on-time execution.
           </p>
 
           {/* Reach Us */}
@@ -44,7 +49,9 @@ export default function ContactPage() {
                 </div>
                 <div>
                   <div className="text-sm text-gray-500 mb-0.5">Phone</div>
-                  <div className="font-medium">+91 XXXXX XXXXX</div>
+                  <a href="tel:+918050013054" className="font-medium hover:text-brand-orange transition-colors">
+                    +91 8050013054
+                  </a>
                 </div>
               </div>
 
@@ -54,7 +61,9 @@ export default function ContactPage() {
                 </div>
                 <div>
                   <div className="text-sm text-gray-500 mb-0.5">Email</div>
-                  <div className="font-medium">info@colourfullhomes.com</div>
+                  <a href="mailto:colourfullhomes07@gmail.com" className="font-medium hover:text-brand-orange transition-colors">
+                    colourfullhomes07@gmail.com
+                  </a>
                 </div>
               </div>
 
@@ -63,8 +72,8 @@ export default function ContactPage() {
                   <MapPin className="w-5 h-5 text-brand-orange" />
                 </div>
                 <div>
-                  <div className="text-sm text-gray-500 mb-0.5">Service Areas</div>
-                  <div className="font-medium">Residential & Commercial</div>
+                  <div className="text-sm text-gray-500 mb-0.5">Address</div>
+                  <div className="font-medium">HSR layout, Sec-1, Bengaluru, Karnataka 560102</div>
                 </div>
               </div>
             </div>
@@ -75,11 +84,14 @@ export default function ContactPage() {
         <div>
           {/* Mobile Heading - Only visible on mobile */}
           <div className="md:hidden mb-6">
-            <h1 className="text-3xl font-bold mb-3 text-brand-dark">
-              Contact Us
+            <h1 className="text-3xl font-bold mb-2 text-brand-dark">
+              Colourfull Homes
             </h1>
+            <h2 className="text-xl font-semibold mb-3 text-brand-dark">
+              Home Painting Services
+            </h2>
             <p className="text-base text-gray-600 leading-relaxed">
-              Fill out the form and our team will get back to you shortly.
+              Hassle-free home painting with expert supervision, premium materials, and on-time execution.
             </p>
           </div>
 
@@ -110,7 +122,9 @@ export default function ContactPage() {
           {/* WhatsApp CTA – mobile only */}
           <div className="mt-6 text-center md:hidden">
             <a
-              href="https://wa.me/91XXXXXXXXXX"
+              href="https://wa.me/918050013054"
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-block w-full bg-green-500 text-white py-3 rounded-lg font-semibold hover:bg-green-600 transition-colors shadow-[var(--shadow-button)]"
             >
               Chat on WhatsApp
@@ -118,6 +132,70 @@ export default function ContactPage() {
           </div>
         </div>
 
+      </section>
+
+      {/* Why Choose Colourfull Homes Section */}
+      <section className="mt-12 md:mt-16">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-bold mb-8 text-brand-dark text-center">
+            Why Choose Colourfull Homes?
+          </h2>
+          <div className="space-y-4 md:space-y-5">
+            <div className="bg-white border border-gray-200 rounded-xl p-5 md:p-6 hover:shadow-[var(--shadow-card)] transition-all hover:border-brand-orange/30">
+              <div className="flex items-start gap-4">
+                <CheckCircle className="w-6 h-6 text-brand-orange shrink-0 mt-0.5" />
+                <p className="text-gray-700 leading-relaxed text-base">
+                  Trained professional painters with verified skills and expertise.
+                </p>
+              </div>
+            </div>
+
+            <div className="bg-white border border-gray-200 rounded-xl p-5 md:p-6 hover:shadow-[var(--shadow-card)] transition-all hover:border-brand-orange/30">
+              <div className="flex items-start gap-4">
+                <CheckCircle className="w-6 h-6 text-brand-orange shrink-0 mt-0.5" />
+                <p className="text-gray-700 leading-relaxed text-base">
+                  On-time completion—projects finished as promised without delays.
+                </p>
+              </div>
+            </div>
+
+            <div className="bg-white border border-gray-200 rounded-xl p-5 md:p-6 hover:shadow-[var(--shadow-card)] transition-all hover:border-brand-orange/30">
+              <div className="flex items-start gap-4">
+                <CheckCircle className="w-6 h-6 text-brand-orange shrink-0 mt-0.5" />
+                <p className="text-gray-700 leading-relaxed text-base">
+                  Top-notch quality with genuine branded products: Asian Paints, Berger, Dulux, Birla Opus.
+                </p>
+              </div>
+            </div>
+
+            <div className="bg-white border border-gray-200 rounded-xl p-5 md:p-6 hover:shadow-[var(--shadow-card)] transition-all hover:border-brand-orange/30">
+              <div className="flex items-start gap-4">
+                <CheckCircle className="w-6 h-6 text-brand-orange shrink-0 mt-0.5" />
+                <p className="text-gray-700 leading-relaxed text-base">
+                  Furniture safety with proper packing and masking to prevent damage during work.
+                </p>
+              </div>
+            </div>
+
+            <div className="bg-white border border-gray-200 rounded-xl p-5 md:p-6 hover:shadow-[var(--shadow-card)] transition-all hover:border-brand-orange/30">
+              <div className="flex items-start gap-4">
+                <CheckCircle className="w-6 h-6 text-brand-orange shrink-0 mt-0.5" />
+                <p className="text-gray-700 leading-relaxed text-base">
+                  Post-service cleaning to leave your space spotless and ready to enjoy.
+                </p>
+              </div>
+            </div>
+
+            <div className="bg-white border border-gray-200 rounded-xl p-5 md:p-6 hover:shadow-[var(--shadow-card)] transition-all hover:border-brand-orange/30">
+              <div className="flex items-start gap-4">
+                <CheckCircle className="w-6 h-6 text-brand-orange shrink-0 mt-0.5" />
+                <p className="text-gray-700 leading-relaxed text-base">
+                  Hassle-free service—all materials procured by us, so you don&apos;t have to worry.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
     </main>
   );

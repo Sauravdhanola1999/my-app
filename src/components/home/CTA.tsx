@@ -25,7 +25,9 @@ export default function CTA() {
             Get Free Consultation
           </a>
           <a
-            href="https://wa.me/91XXXXXXXXXX"
+            href="https://wa.me/918050013054"
+            target="_blank"
+            rel="noopener noreferrer"
             className="flex items-center justify-center gap-2 bg-white text-brand-blue px-6 py-3 rounded-lg font-semibold hover:bg-brand-light transition-all shadow-lg hover:shadow-xl text-sm md:text-base"
           >
             <MessageCircle className="w-4 h-4" />

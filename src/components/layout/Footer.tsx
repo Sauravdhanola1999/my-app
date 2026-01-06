@@ -17,7 +17,7 @@ export default function Footer() {
             {/* Social Media Icons */}
             <div className="flex gap-4">
               <a
-                href="https://facebook.com"
+                href="https://www.facebook.com/colourfull.homes/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 rounded-lg bg-gray-800 hover:bg-brand-blue flex items-center justify-center transition-colors group"
@@ -26,7 +26,7 @@ export default function Footer() {
                 <Facebook className="w-5 h-5 text-gray-400 group-hover:text-white transition-colors" />
               </a>
               <a
-                href="https://instagram.com"
+                href="https://www.instagram.com/colourfull.homes/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 rounded-lg bg-gray-800 hover:bg-gradient-to-br hover:from-purple-600 hover:to-pink-600 flex items-center justify-center transition-all group"
@@ -91,15 +91,19 @@ export default function Footer() {
             <ul className="space-y-3 text-base">
               <li className="flex items-center gap-2 hover:text-white transition-colors">
                 <Phone className="w-4 h-4 text-brand-orange" />
-                +91 XXXXX XXXXX
+                <a href="tel:+918050013054" className="hover:text-brand-orange transition-colors">
+                  +91 8050013054
+                </a>
               </li>
               <li className="flex items-center gap-2 hover:text-white transition-colors">
                 <Mail className="w-4 h-4 text-brand-orange" />
-                info@colourfullhomes.com
+                <a href="mailto:colourfullhomes07@gmail.com" className="hover:text-brand-orange transition-colors">
+                  colourfullhomes07@gmail.com
+                </a>
               </li>
-              <li className="flex items-center gap-2 hover:text-white transition-colors">
-                <MapPin className="w-4 h-4 text-brand-orange" />
-                Residential & Commercial
+              <li className="flex items-start gap-2 hover:text-white transition-colors">
+                <MapPin className="w-4 h-4 text-brand-orange mt-1 shrink-0" />
+                <span>HSR layout, Sec-1, Bengaluru, Karnataka 560102</span>
               </li>
             </ul>
           </div>

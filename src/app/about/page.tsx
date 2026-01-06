@@ -5,6 +5,7 @@ import {
   Clock,
   Sparkles,
   Headset,
+  Sofa,
 } from "lucide-react";
 
 export const metadata: Metadata = {
@@ -15,23 +16,27 @@ export const metadata: Metadata = {
 
 const values = [
   {
-    label: "Experienced & trained professionals",
+    label: "Trained professional painters",
     icon: UserCheck,
   },
   {
-    label: "Premium materials & trusted brands",
-    icon: ShieldCheck,
-  },
-  {
-    label: "Transparent timelines & execution",
+    label: "On-time completion",
     icon: Clock,
   },
   {
-    label: "Clean workmanship & quality checks",
+    label: "Top-notch quality (Asian Paints, Berger, Dulux, Birla Opus)",
+    icon: ShieldCheck,
+  },
+  {
+    label: "Furniture safety with packing & masking",
+    icon: Sofa,
+  },
+  {
+    label: "Post-service cleaning",
     icon: Sparkles,
   },
   {
-    label: "Dedicated customer support",
+    label: "Hassle-free service (all materials procured by us)",
     icon: Headset,
   },
 ];
@@ -41,41 +46,62 @@ export default function AboutPage() {
     <main className="max-w-6xl mx-auto px-6 py-12 md:py-20">
       
       {/* Hero / Intro */}
-      <section className="mb-16 md:mb-20 max-w-3xl">
-        <h1 className="text-4xl md:text-5xl font-bold mb-6 text-brand-dark">
-          About Colourfull Homes
-        </h1>
-        <p className="text-lg text-gray-600 leading-relaxed">
-          Colourfull Homes is a home solutions brand focused on delivering
-          reliable, high-quality services with transparency, professionalism,
-          and long-lasting results.
-        </p>
+
+
+      {/* About Us Section */}
+      <section className="mb-16 md:mb-20">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-bold mb-6 text-brand-dark text-center">
+            About Us
+          </h2>
+          <div className="bg-white border border-gray-200 rounded-2xl p-8 md:p-10 space-y-6">
+            <p className="text-gray-700 leading-relaxed text-base md:text-lg">
+              At Colourfull Homes, we believe every space deserves character, comfort, and craftsmanship. We are a professional home improvement and interior solutions brand specializing in home painting, waterproofing, wood polishing, wall textures, wallpapers, wall panels, and custom furniture design & manufacturing.
+            </p>
+            <p className="text-gray-700 leading-relaxed text-base md:text-lg">
+              With a strong focus on quality and detail, our team of trained professionals transforms homes into beautiful, long-lasting living spaces. From vibrant wall finishes to elegant furniture and durable protective solutions, we combine modern techniques with premium materials to deliver results you can trust.
+            </p>
+            <p className="text-gray-700 leading-relaxed text-base md:text-lg">
+              What sets us apart is our end-to-end service approach—from consultation and design to execution and post-service cleanup. We ensure timely completion, furniture safety with proper masking, and a hassle-free experience for every client.
+            </p>
+            <p className="text-gray-700 leading-relaxed text-base md:text-lg">
+              Whether you&apos;re renovating, upgrading, or building from scratch, Colourfull Homes is committed to adding value, style, and durability to your interiors—making your house truly feel like home.
+            </p>
+          </div>
+        </div>
       </section>
 
-      {/* Who We Are + Mission */}
-      <section className="mb-16 md:mb-20 grid md:grid-cols-2 gap-10 md:gap-12">
-        <div>
-          <h2 className="text-2xl font-semibold mb-5 text-brand-dark">
+      {/* Who We Are */}
+      <section className="mb-16 md:mb-20">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-bold mb-6 text-brand-dark text-center">
             Who We Are
           </h2>
-          <p className="text-gray-600 leading-relaxed">
-            We specialize in end-to-end home improvement services including
-            painting, waterproofing, wall textures, furniture solutions, and
-            interior upgrades. Our approach combines skilled craftsmanship,
-            modern techniques, and premium materials to ensure consistent
-            quality across every project.
-          </p>
+          <div className="bg-white border border-gray-200 rounded-2xl p-8 md:p-10">
+            <p className="text-gray-700 leading-relaxed text-base md:text-lg">
+              We specialize in end-to-end home improvement services including
+              painting, waterproofing, wall textures, furniture solutions, and
+              interior upgrades. Our approach combines skilled craftsmanship,
+              modern techniques, and premium materials to ensure consistent
+              quality across every project.
+            </p>
+          </div>
         </div>
+      </section>
 
-        <div>
-          <h2 className="text-2xl font-semibold mb-5 text-brand-dark">
+      {/* Our Mission */}
+      <section className="mb-16 md:mb-20">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-bold mb-6 text-brand-dark text-center">
             Our Mission
           </h2>
-          <p className="text-gray-600 leading-relaxed">
-            Our mission is to simplify home improvement by offering services
-            that are easy to understand, clearly priced, and professionally
-            executed—so homeowners can upgrade their spaces without stress.
-          </p>
+          <div className="bg-white border border-gray-200 rounded-2xl p-8 md:p-10">
+            <p className="text-gray-700 leading-relaxed text-base md:text-lg">
+              Our mission is to simplify home improvement by offering services
+              that are easy to understand, clearly priced, and professionally
+              executed—so homeowners can upgrade their spaces without stress.
+            </p>
+          </div>
         </div>
       </section>
 

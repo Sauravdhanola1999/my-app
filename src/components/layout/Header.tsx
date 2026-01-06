@@ -6,6 +6,7 @@ import clsx from "clsx";
 import { Menu, X, ChevronDown } from "lucide-react";
 import { useState } from "react";
 import { services } from "@/src/data/services";
+import Image from "next/image";
 
 const navItems = [
   { name: "Home", href: "/" },
@@ -33,11 +34,21 @@ export default function Header() {
 
   return (
     <header className="sticky top-0 z-50 bg-white/95 backdrop-blur-sm border-b border-gray-100 shadow-sm">
-      <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-        <Link href="/" className="text-2xl md:text-3xl font-bold tracking-tight">
-          <span className="text-brand-blue">Colourfull</span>{" "}
-          <span className="text-brand-dark">Homes</span>
-        </Link>
+      <div className="max-w-7xl mx-auto px-6 py-5 md:py-1 flex items-center justify-between">
+       <Link
+  href="/"
+  className="flex items-center  tracking-tight"
+>
+  {/* Logo */}
+  <Image
+    src="/logo.png" // place logo inside /public
+    alt="Colourfull Homes Logo"
+    width={48}
+    height={48}
+    priority
+    className="object-contain w-16 h-16 md:w-20 md:h-20"
+  />
+</Link>
 
         <nav className="hidden md:flex gap-8 items-center">
           {navItems.map((item) => {

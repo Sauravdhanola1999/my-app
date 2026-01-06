@@ -1,11 +1,12 @@
-import { Users, Clock, ShieldCheck, Sofa, Sparkles } from "lucide-react";
+import { Users, Clock, ShieldCheck, Sofa, Sparkles, ShoppingBag } from "lucide-react";
 
 const points = [
-  { label: "Trained Professionals", icon: Users, description: "Verified & skilled experts" },
-  { label: "On-Time Completion", icon: Clock, description: "Stick to deadlines" },
-  { label: "Premium Quality Materials", icon: ShieldCheck, description: "Trusted brands only" },
-  { label: "Furniture Protection", icon: Sofa, description: "Complete care" },
-  { label: "Post-Service Cleaning", icon: Sparkles, description: "Spotless finish" },
+  { label: "Trained Professional Painters", icon: Users, description: "Skilled and verified experts" },
+  { label: "On-Time Completion", icon: Clock, description: "Projects completed as promised" },
+  { label: "Top Notch Quality", icon: ShieldCheck, description: "Genuine brands: Asian Paints, Berger, Dulux, Birla Opus" },
+  { label: "Furniture Safety", icon: Sofa, description: "Packing & masking for complete protection" },
+  { label: "Post-Service Cleaning", icon: Sparkles, description: "Spotless finish after completion" },
+  { label: "Hassle-Free Service", icon: ShoppingBag, description: "All materials procured by us" },
 ];
 
 export default function WhyChooseUs() {
@@ -20,7 +21,7 @@ export default function WhyChooseUs() {
             We make home improvement simple, reliable, and hassle-free
           </p>
         </div>
-        <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-6">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {points.map(({ label, icon: Icon, description }, index) => (
             <div 
               key={label} 

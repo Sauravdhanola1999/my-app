@@ -6,24 +6,25 @@ import {
   Sofa,
   Sparkles,
   Smile,
+  ArrowRight,
 } from "lucide-react";
 import { services } from "@/src/data/services";
 
 const trustPoints = [
   {
-    label: "Trained & verified professionals",
+    label: "Trained professional painters",
     icon: UserCheck,
-  },
-  {
-    label: "Premium quality materials",
-    icon: ShieldCheck,
   },
   {
     label: "On-time completion",
     icon: Clock,
   },
   {
-    label: "Furniture & floor protection",
+    label: "Top-notch quality (Asian Paints, Berger, Dulux, Birla Opus)",
+    icon: ShieldCheck,
+  },
+  {
+    label: "Furniture safety with packing & masking",
     icon: Sofa,
   },
   {
@@ -31,7 +32,7 @@ const trustPoints = [
     icon: Sparkles,
   },
   {
-    label: "Hassle-free experience",
+    label: "Hassle-free service (all materials procured by us)",
     icon: Smile,
   },
 ];
@@ -53,33 +54,46 @@ export default function ServicesPage() {
       </section>
 
       {/* Services Grid */}
-      <section className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-20">
-        {services.map((service) => {
-          const Icon = service.icon;
+      <section className="mb-20">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          {services.map((service, index) => {
+            const Icon = service.icon;
+            const isBlue = index % 2 === 1;
 
-          return (
-            <Link
-              key={service.slug}
-              href={`/services/${service.slug}`}
-              className="group bg-white border border-gray-200 rounded-2xl p-8 hover:shadow-[var(--shadow-card)] hover:border-brand-orange/30 transition-all"
-            >
-              {/* Icon */}
-              <div className="w-14 h-14 rounded-xl bg-brand-orange/10 flex items-center justify-center mb-5 group-hover:bg-brand-orange/20 transition-colors">
-                <Icon className="w-7 h-7 text-brand-orange group-hover:scale-110 transition-transform" />
-              </div>
+            return (
+              <Link
+                key={service.slug}
+                href={`/services/${service.slug}`}
+                className="group bg-white rounded-xl p-6 hover:shadow-[var(--shadow-card)] transition-all border border-gray-200 hover:border-brand-orange/30"
+              >
+                {/* Icon */}
+                <div className={`w-14 h-14 rounded-xl ${
+                  isBlue ? 'bg-brand-blue/10' : 'bg-brand-orange/10'
+                } flex items-center justify-center mb-4 group-hover:scale-110 transition-transform`}>
+                  <Icon className={`w-7 h-7 ${
+                    isBlue ? 'text-brand-blue' : 'text-brand-orange'
+                  }`} />
+                </div>
 
-              {/* Title */}
-              <h2 className="text-xl font-semibold mb-3 text-brand-dark">
-                {service.title}
-              </h2>
+                {/* Title */}
+                <h2 className="text-lg font-semibold mb-2 text-brand-dark group-hover:text-brand-orange transition-colors">
+                  {service.title}
+                </h2>
 
-              {/* Description */}
-              <p className="text-gray-600 text-sm leading-relaxed">
-                {service.shortDescription}
-              </p>
-            </Link>
-          );
-        })}
+                {/* Description */}
+                <p className="text-gray-600 text-sm leading-relaxed mb-4">
+                  {service.shortDescription}
+                </p>
+
+                {/* Arrow */}
+                <div className="flex items-center text-brand-orange font-medium text-sm group-hover:gap-2 transition-all">
+                  <span>Learn more</span>
+                  <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
+                </div>
+              </Link>
+            );
+          })}
+        </div>
       </section>
 
       {/* Trust Section */}
