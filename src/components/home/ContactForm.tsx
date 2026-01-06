@@ -7,8 +7,19 @@ type FormData = {
   name: string;
   email: string;
   mobile: string;
+  service: string;
+  city: string;
   message: string;
 };
+
+const SERVICE_OPTIONS = [
+  "Home painting",
+  "Waterproofing",
+  "Wood polish",
+  "Wall Texture",
+  "Wallpaper & Wall panel",
+  "Furniture designing & Manufacturing",
+];
 
 export default function ContactForm() {
   const {
@@ -39,24 +50,51 @@ export default function ContactForm() {
       onSubmit={handleSubmit(onSubmit)}
       className="bg-white border rounded-2xl p-8 space-y-4"
     >
+      {/* Name */}
       <input
         {...register("name", { required: true })}
         placeholder="Your Name"
         className="w-full border rounded-lg px-4 py-3"
       />
 
+      {/* Email */}
       <input
         {...register("email", { required: true })}
         placeholder="Email Address"
         className="w-full border rounded-lg px-4 py-3"
       />
 
+      {/* Mobile */}
       <input
         {...register("mobile", { required: true })}
         placeholder="Mobile Number"
         className="w-full border rounded-lg px-4 py-3"
       />
 
+      {/* Service Dropdown */}
+      <select
+        {...register("service", { required: true })}
+        className="w-full border rounded-lg px-4 py-3 bg-white"
+        defaultValue=""
+      >
+        <option value="" disabled>
+          Service Interested In
+        </option>
+        {SERVICE_OPTIONS.map((service) => (
+          <option key={service} value={service}>
+            {service}
+          </option>
+        ))}
+      </select>
+
+      {/* City */}
+      <input
+        {...register("city", { required: true })}
+        placeholder="City"
+        className="w-full border rounded-lg px-4 py-3"
+      />
+
+      {/* Message */}
       <textarea
         {...register("message")}
         placeholder="Tell us about your project"
@@ -64,10 +102,11 @@ export default function ContactForm() {
         className="w-full border rounded-lg px-4 py-3"
       />
 
+      {/* Submit */}
       <button
         type="submit"
         disabled={isSubmitting}
-        className="bg-orange-500 text-white px-6 py-3 rounded-lg font-semibold hover:bg-orange-600 disabled:opacity-60"
+        className="bg-orange-500 text-white px-6 py-3 rounded-lg font-semibold hover:bg-orange-600 disabled:opacity-60 w-full"
       >
         {isSubmitting ? "Sending..." : "Send Message"}
       </button>

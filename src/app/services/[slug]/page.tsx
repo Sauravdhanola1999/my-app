@@ -8,7 +8,7 @@ type Props = {
 export default async function ServiceDetail({ params }: Props) {
   const { slug } = await params;
 
-  const service = services.find((s) => s.slug === sludada g);
+    const service = services.find((s) => s.slug === slug);
 
   if (!service) notFound();
 
