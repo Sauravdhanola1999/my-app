@@ -9,8 +9,7 @@ import {
   Droplets, 
   Palette, 
   Palette as ShadeIcon,
-  UserCheck,
-  ArrowRight
+  UserCheck
 } from "lucide-react";
 
 const quickServices = [

@@ -57,13 +57,13 @@ export default function ServiceBlocks() {
             Everything Your Home Needs
           </h2>
           <p className="text-base md:text-lg text-gray-600 max-w-2xl mx-auto">
-            Complete home solutions in one place. From painting to waterproofing, we've got you covered.
+            Complete home solutions in one place. From painting to waterproofing, we&apos;ve got you covered.
           </p>
         </div>
 
         {/* Services Grid */}
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-6">
-          {services.map((service, index) => (
+          {services.map((service) => (
             <Link
               key={service.title}
               href={service.href}

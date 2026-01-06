@@ -28,7 +28,7 @@ export default function Testimonials() {
 
               {/* Message */}
               <p className="text-gray-700 text-sm leading-relaxed mb-6">
-                "{item.message}"
+                &ldquo;{item.message}&rdquo;
               </p>
 
               {/* User */}

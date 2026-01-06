@@ -20,8 +20,10 @@ export default function Header() {
 
   // Close mobile menu when route changes
   useEffect(() => {
-    setMobileMenuOpen(false);
-  }, [pathname]);
+    if (mobileMenuOpen) {
+      setMobileMenuOpen(false);
+    }
+  }, [pathname, mobileMenuOpen]);
 
   return (
     <header className="sticky top-0 z-50 bg-white/95 backdrop-blur-sm border-b border-gray-100 shadow-sm">
