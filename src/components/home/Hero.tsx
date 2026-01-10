@@ -27,7 +27,7 @@ export default function Hero() {
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <Image
-          src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=1920&h=1080&fit=crop"
+          src="https://res.cloudinary.com/duhtmczhn/image/upload/v1768061729/homepage_b79qb7.jpg"
           alt="Professional home painting and renovation services"
           fill
           className="object-cover"
