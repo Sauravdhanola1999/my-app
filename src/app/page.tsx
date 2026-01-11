@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   description:
     "Professional home painting, waterproofing, wall textures, furniture & interiors. End-to-end home solutions with premium quality and care",
   alternates: {
-    canonical: "https://colourfullhomes.in/",
+    canonical: "https://colourfullhomes.com/",
   },
 };
 

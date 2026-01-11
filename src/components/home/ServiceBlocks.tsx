@@ -20,7 +20,7 @@ const services = [
   {
     title: "Waterproofing",
     description: "Stop leaks & dampness",
-    image: "https://res.cloudinary.com/duhtmczhn/image/upload/v1768060757/kitchenmakeover_dffopq.jpg",
+    image: "https://res.cloudinary.com/duhtmczhn/image/upload/v1768140900/waterproofing_mmptyk.jpg",
     href: "/services/waterproofing",
     color: "bg-brand-orange/10",
   },

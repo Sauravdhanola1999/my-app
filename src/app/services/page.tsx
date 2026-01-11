@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { Metadata } from "next";
 import {
   UserCheck,
   ShieldCheck,
@@ -36,6 +37,23 @@ const trustPoints = [
     icon: Smile,
   },
 ];
+
+export const metadata: Metadata = {
+  title: "Home Painting, Waterproofing & Interior Services | Colourfull Homes",
+  description:
+    "Professional home painting, waterproofing, wall textures, furniture, and interior services by Colourfull Homes using Asian Paints, Berger, Dulux etc..,",
+  alternates: {
+    canonical: "https://colourfullhomes.in/services",
+  },
+  openGraph: {
+    title: "Home Painting, Waterproofing & Interior Services | Colourfull Homes",
+    description:
+      "Explore premium home painting, waterproofing, wall textures and renovation services delivered by trained professionals.",
+    url: "https://colourfullhomes.in/services",
+    siteName: "Colourfull Homes",
+    type: "website",
+  },
+};
 
 export default function ServicesPage() {
   return (
