@@ -12,6 +12,9 @@ export const metadata: Metadata = {
   title: "About Us | Colourfull Homes",
   description:
     "Learn about Colourfull Homes, our mission, values, and commitment to delivering high-quality home solutions.",
+     alternates: {
+     canonical: "https://colourfullhomes.com/about",
+  },
 };
 
 const values = [

@@ -13,6 +13,7 @@ const nextConfig: NextConfig = {
         hostname: "res.cloudinary.com",
       },
     ],
+    minimumCacheTTL: 60,
   },
   outputFileTracingRoot: path.join(__dirname),
 };

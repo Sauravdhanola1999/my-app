@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { useForm } from "react-hook-form";
-import { MessageCircle, Mail, ChevronDown, CheckCircle, X } from "lucide-react";
+import { MessageCircle, Mail, ChevronDown, CheckCircle } from "lucide-react";
 
 type FormData = {
   name: string;

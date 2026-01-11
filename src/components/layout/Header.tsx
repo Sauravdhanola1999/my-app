@@ -19,7 +19,7 @@ const navItems = [
 // Map service titles to match the dropdown names
 const serviceNames: Record<string, string> = {
   "Home Painting": "Home Painting",
-  "Waterproofing": "Waterproofing Services",
+  Waterproofing: "Waterproofing Services",
   "Wall Textures": "Wall Texture",
   "Wallpapers & Panels": "Wallpaper & Wall Panel",
   "Wood Polish": "Wood Polish",
@@ -35,20 +35,17 @@ export default function Header() {
   return (
     <header className="sticky top-0 z-50 bg-white/95 backdrop-blur-sm border-b border-gray-100 shadow-sm">
       <div className="max-w-7xl mx-auto px-6 py-5 md:py-1 flex items-center justify-between">
-       <Link
-  href="/"
-  className="flex items-center  tracking-tight"
->
-  {/* Logo */}
-  <Image
-    src="/logo.png" // place logo inside /public
-    alt="Colourfull Homes Logo"
-    width={48}
-    height={48}
-    priority
-    className="object-contain w-16 h-16 md:w-20 md:h-20"
-  />
-</Link>
+        <Link href="/" className="flex items-center  tracking-tight">
+          {/* Logo */}
+          <Image
+            src="/logo.png" // place logo inside /public
+            alt="Colourfull Homes Logo"
+            width={48}
+            height={48}
+            priority
+            className="object-contain w-16 h-16 md:w-20 md:h-20"
+          />
+        </Link>
 
         <nav className="hidden md:flex gap-8 items-center">
           {navItems.map((item) => {
@@ -75,10 +72,12 @@ export default function Header() {
                     )}
                   >
                     {item.name}
-                    <ChevronDown className={clsx(
-                      "w-4 h-4 transition-transform",
-                      servicesDropdownOpen && "rotate-180"
-                    )} />
+                    <ChevronDown
+                      className={clsx(
+                        "w-4 h-4 transition-transform",
+                        servicesDropdownOpen && "rotate-180"
+                      )}
+                    />
                     {isActive && (
                       <span className="absolute -bottom-1 left-0 right-0 h-0.5 bg-brand-orange"></span>
                     )}
@@ -89,7 +88,8 @@ export default function Header() {
                     <div className="absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-xl border border-gray-200 py-2 z-50">
                       {services.map((service) => {
                         const Icon = service.icon;
-                        const displayName = serviceNames[service.title] || service.title;
+                        const displayName =
+                          serviceNames[service.title] || service.title;
                         return (
                           <Link
                             key={service.slug}
@@ -98,7 +98,9 @@ export default function Header() {
                             onClick={() => setServicesDropdownOpen(false)}
                           >
                             <Icon className="w-5 h-5 text-brand-orange" />
-                            <span className="text-sm font-medium">{displayName}</span>
+                            <span className="text-sm font-medium">
+                              {displayName}
+                            </span>
                           </Link>
                         );
                       })}
@@ -141,7 +143,11 @@ export default function Header() {
             className="md:hidden p-2 text-gray-700"
             aria-label="Toggle menu"
           >
-            {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            {mobileMenuOpen ? (
+              <X className="w-6 h-6" />
+            ) : (
+              <Menu className="w-6 h-6" />
+            )}
           </button>
         </div>
       </div>
@@ -169,16 +175,19 @@ export default function Header() {
                       )}
                     >
                       {item.name}
-                      <ChevronDown className={clsx(
-                        "w-4 h-4 transition-transform",
-                        mobileServicesOpen && "rotate-180"
-                      )} />
+                      <ChevronDown
+                        className={clsx(
+                          "w-4 h-4 transition-transform",
+                          mobileServicesOpen && "rotate-180"
+                        )}
+                      />
                     </button>
                     {mobileServicesOpen && (
                       <div className="pl-4 mt-2 space-y-1">
                         {services.map((service) => {
                           const Icon = service.icon;
-                          const displayName = serviceNames[service.title] || service.title;
+                          const displayName =
+                            serviceNames[service.title] || service.title;
                           return (
                             <Link
                               key={service.slug}

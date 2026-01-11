@@ -12,10 +12,14 @@ import BeforeAfterGallery from "../components/home/BeforeAfterGallery";
 
 
 export const metadata: Metadata = {
-  title: "Colourfull Homes | Complete Home Solutions",
+  title: "Colourfull Homes – Complete Interior & Painting Experts",
   description:
-    "Professional home painting, waterproofing, wall textures, furniture and renovation services.",
+    "Professional home painting, waterproofing, wall textures, furniture & interiors. End-to-end home solutions with premium quality and care",
+  alternates: {
+    canonical: "https://colourfullhomes.in/",
+  },
 };
+
 
 export default function HomePage() {
   return (

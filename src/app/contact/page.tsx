@@ -13,6 +13,9 @@ export const metadata: Metadata = {
   title: "Contact Us | Colourfull Homes",
   description:
     "Get in touch with Colourfull Homes for painting, waterproofing, and complete home solutions.",
+    alternates: {
+     canonical: "https://colourfullhomes.com/contact",
+  },
 };
 
 export default function ContactPage() {

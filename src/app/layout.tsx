@@ -2,6 +2,7 @@ import { Inter, Poppins } from "next/font/google";
 import Footer from "../components/layout/Footer";
 import Header from "../components/layout/Header";
 import "./globals.css";
+import { Metadata } from "next";
 
 const inter = Inter({
   weight: ["400", "500", "600", "700"],
@@ -17,14 +18,21 @@ const poppins = Poppins({
   display: "swap",
 });
 
-export const metadata = {
+export const metadata: Metadata = {
+  metadataBase: new URL("https://colourfullhomes.in"),
   title: "Colourfull Homes | Complete Home Solutions",
   description:
     "Professional home painting, waterproofing, wall textures, furniture & more.",
+  verification: {
+    google: "QtMj-quGh54Qs0NZXMcI489A_i6m0mmruxEJuFGGS7U",
+  },
   icons: {
-    icon: "/logo.png",
-    shortcut: "/logo.png",
-    apple: "/logo.png",
+    icon: "/favicon.ico",
+    shortcut: "/favicon.ico",
+    apple: "/favicon.ico",
+  },
+  alternates: {
+    canonical: "/",
   },
 };
 
