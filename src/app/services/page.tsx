@@ -43,13 +43,13 @@ export const metadata: Metadata = {
   description:
     "Professional home painting, waterproofing, wall textures, furniture, and interior services by Colourfull Homes using Asian Paints, Berger, Dulux etc..,",
   alternates: {
-    canonical: "https://colourfullhomes.in/services",
+    canonical: "https://colourfullhomes.com/services",
   },
   openGraph: {
     title: "Home Painting, Waterproofing & Interior Services | Colourfull Homes",
     description:
       "Explore premium home painting, waterproofing, wall textures and renovation services delivered by trained professionals.",
-    url: "https://colourfullhomes.in/services",
+    url: "https://colourfullhomes.com/services",
     siteName: "Colourfull Homes",
     type: "website",
   },
