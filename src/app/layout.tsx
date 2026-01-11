@@ -19,7 +19,7 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://colourfullhomes.in"),
+  metadataBase: new URL("https://colourfullhomes.com"),
   title: "Colourfull Homes | Complete Home Solutions",
   description:
     "Professional home painting, waterproofing, wall textures, furniture & more.",
